@@ -36,7 +36,7 @@ sys.path.append(os.path.join(os.getcwd(),'python/'))
 import darknet as dn
 
 # Darknet
-net = dn.load_net("cfg/tiny-yolo.cfg", "tiny-yolo.weights", 0)
+net = dn.load_net("cfg/yolov3-tiny.cfg", "yolov3-tiny.weights", 0)
 meta = dn.load_meta("cfg/coco.data")
 r = dn.detect(net, meta, "data/dog.jpg")
 print r
@@ -53,4 +53,3 @@ im = array_to_image(arr)
 dn.rgbgr_image(im)
 r = detect2(net, meta, im)
 print r
-
